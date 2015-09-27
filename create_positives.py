@@ -7,7 +7,7 @@ Create Positive samples images from jeans list
 
 '''
 
-IN_DIR = './imgs_subset/'
+IN_DIR = './imgs/'
 OUT_DIR = './jeanheads/'
 
 
