@@ -7,16 +7,21 @@ Create Positive samples images from jeans list
 
 '''
 
-IN_DIR = '/home/jean/Kaggle/Wale/Nick/data/imgs/'
-OUT_DIR = '/home/jean/Kaggle/Wale/Nick/data/train_pos/'
+IN_DIR = './data/imgs_subset/'
+OUT_DIR = './jeanheads/'
 
 
 import pandas as pd
+import os
 from PIL import Image
 
 
 
+
 def create_positives():
+        if not os.path.exists(OUT_DIR):
+            os.makedirs(OUT_DIR)
+
 	tmp = pd.read_csv('./positive_positions.csv', delimiter='\t', header=None)
 
 	d = { 'pos' : tmp[1], 'path' : tmp[0] }
